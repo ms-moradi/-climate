@@ -9,7 +9,7 @@ export default function Home() {
   if(result.error) return( <h1> Somthing went wrong! </h1> )
   if(result.isLoading) return( <h1> Loading... </h1> )
 
-  console.log(result.data.result.main.temp)
+  
   return (
    <>
     <CityCard result={result}/>
