@@ -12,11 +12,13 @@ export const useGetData = () =>{
     return{ data, error, isLoading}
 }
 
-const url2 = "//one-api.ir/weather/?token=726804:650012cfe76e1&action=daily&city=شیراز"
+// const url2 = "//one-api.ir/weather/?token=726804:650012cfe76e1&action=daily&city=شیراز"
+const fetcher2 = url2 => fetch(url2).then(res => res);
+const url2 = "//one-api.ir/weather/?token=726804:650012cfe76e1&action=icon&id=800"
 
 export const GetForecastSixteenDay = () =>{
 
-    const {data, error, isLoading} = useSWR(url2, fetcher)
+    const {data, error, isLoading} = useSWR(url2, fetcher2)
 
     return{data, error, isLoading}
 }
